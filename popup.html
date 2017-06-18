@@ -1,0 +1,101 @@
+<html>
+<head>
+<link rel="stylesheet" href="popup.css" title ="popup_css" type="text/css"/>
+<link href="content/jquery.notice.css" rel="stylesheet" type="text/css"/> 
+ 
+   <script src="modules/common.js"></script>
+   <script type="text/javascript"src="content/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="content/jquery.notice.js"></script>
+  
+ 
+</head>
+<body>
+<!----------------------- Main Screen Start------------------------->
+<div id="mainScreen">
+	<!----------------------- SignIn Screen Start------------------------->		
+    <div id="SignIn-Screen" class="signInScreen" style="display:none;" >
+    	<div id="SignInContent" style="background-image:url(images/stopwatch.gif);">
+        	<!--<span style="margin-bottom:3px; display:inline-block">SignIn with your Assembla id/email:</span>
+            <input class="sigInInput" type="text" id="signInAssemblaID" />
+            <br />
+            <span style="margin-top:10px;margin-bottom:3px;display:inline-block">Enter Your Password:</span>
+            <input class="sigInInput" type="password" id="signInPassword" />-->
+            
+            <div class="signInSubmit" id="signInSbmtBtn"></div>
+        </div>
+    </div>
+    <!----------------------- SignIn Screen End------------------------->
+    	
+    <!----------------------- Stream Screen Start----------------------->	
+    <div id="Stream-Screen" class="StreamScreen" style="display:block;" >
+    	<div class='streamHeader' style=" width:500px; height:50px;">
+        	<a href='https://www.assembla.com/my_tasks' target='_newtab' title='View Time Tracking' style="cursor:pointer; text-decoration">
+				<img id="MemberPic" class="memberPic" src="images/avatar_black.png" />
+            </a>
+			<a href='https://www.assembla.com/my_tasks' target='_newtab' title='View Time Tracking' style="cursor:pointer; text-decoration">
+				<span id="MemberName" class="memberName" style="">Waqas Ahmed</span>
+        	</a>
+			<a href="https://www.assembla.com/mentions" target="_newtab" style='cursor:pointer; text-decoration:none;'>
+				<div id="mentionDiv" title='View Mentions' class="mention" style="display:none;" >
+					<span id="mentions" style="padding-top: 6px;display: inline-block;color:#FFF;" ></span>
+				</div>
+            </a>
+            <div id="loadingSmall" class="loadingSmall" style="display:block; ">
+            	
+            </div>
+            
+            <a href='https://www.assembla.com/tickets' title='View Assigned Tickets' target='_newtab' style="cursor:pointer; text-decoration:none">
+				<div class="totalTicket" style="display:block;">
+					<span id="ticketTotal" style="padding: 6px;display: inline-block; color:black;">25</span>
+				</div>
+			</a>
+            
+            <!-- <img src="images/ticket.png" alt="ticket" style="float:right; margin: 18px 5px auto auto;"/>-->
+        </div>
+        <!---- Counter Div Start----->
+        <div id="counterDiv" class="counter" style="display:none;">
+        	<span id="counterTckt" class="ticketNum" style="">#1234</span>
+        	<a href="" target="_newtab" class="ticketTxt" id="counterTicketTxt" style=" max-width:225px;margin: 9px auto auto 7px">CoVu</a>
+            <img id="stopBtn" title="Stop Timer" src="images/stop_button.png" style=" cursor:pointer; width: 65px;height: 31px;float: right;margin: 4px; margin-right: 9px;" />
+            <input type="text" id="counter" style="float:right;width:73px; height:30px;text-align: center; border:0.1em inset black; outline:none; border-radius:3px;font-size: 16; margin:5px;"  />
+			<br />
+			<input type="text" name="txtField" class='textFieldComment' placeholder="Comment on ticket..." id="ticketComment"></input>
+			<!--<img src="images/button-send.png" id='sendComment' class='commentBTN' style='' />-->
+		</div>
+        <!---- Counter Div End------->
+        
+       <!---- Ticket Clone Start----->
+        <div class="ticket" id="ticketClone" style="display:none">
+            <span class="ticketNum" style="">#1234</span>
+            <a href="" target="_newtab" class="ticketTxt" id="" style="">CoVu</a>
+            <img class="playIcon" src="images/Play-icon.png" title="Start Timer"style=""/>
+        </div> <!---- Ticket Clone End-----> 
+<!----------------------- Spaces Section Start----------------------->
+	<!----------- Spaces Clone Start------------->
+        <div class="spaces hide" id="spaceClone" style="display:none">
+        	<span class="spaceTxt" id="spaceName" style="">CoVu</span>
+        	<img class="arrow" src="images/arrow_left.png" style=""/>
+       		<span class="spaceTicketNum" id="spaceTicketLength" style="">12</span>
+       		 <div id="" class="ticketAppend" style="">
+                             
+             </div>
+        </div>
+  <!----------- Spaces Clone End------------->     
+  <!----------- Spaces Append Start-------------> 
+        <div id="spaceAppendDiv" class="spaceAppend" style="display:block;">
+        	   
+        </div>
+    <!----------- Spaces Append End-------------> 
+        
+<!----------------------- Spaces Section End------------------------->
+<!----------------------- loading Section start------------------------->
+    	<div id="loading" style="display:none; background-image:url(images/stopwatch.gif);margin: 83px auto auto 104px;background-size: 300px; width:300px; height:300px;"></div>
+    	</div>
+    <!----------------------- Loading Section End------------------------->
+    <!----------------------- Stream Screen End------------------------->		
+</div>
+<!----------------------- Main Screen end-------------------->
+</body>
+	<script src="content/popup.js" type="text/javascript"></script>
+    <script type="text/javascript" src="content/tk.alerts.js"></script>
+</html>
